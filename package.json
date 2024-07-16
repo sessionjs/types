@@ -1,6 +1,6 @@
 {
   "name": "@session.js/types",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "module": "src/index.ts",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
@@ -19,6 +19,68 @@
     "dist/**/*.js",
     "dist/**/*.d.ts"
   ],
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    },
+    "./network": {
+      "import": "./dist/network/index.js",
+      "types": "./dist/network/index.d.ts"
+    },
+    "./network/request": {
+      "import": "./dist/network/request.js",
+      "types": "./dist/network/request.d.ts"
+    },
+    "./network/response": {
+      "import": "./dist/network/response.js",
+      "types": "./dist/network/response.d.ts"
+    },
+    "./storage": {
+      "import": "./dist/storage/index.js",
+      "types": "./dist/storage/index.d.ts"
+    },
+    "./signal-bindings": {
+      "import": "./dist/signal-bindings/index.js",
+      "types": "./dist/signal-bindings/index.d.ts"
+    },
+    "./disappearing-message": {
+      "import": "./dist/disappearing-message.js",
+      "types": "./dist/disappearing-message.d.ts"
+    },
+    "./enums": {
+      "import": "./dist/enums.js",
+      "types": "./dist/enums.d.ts"
+    },
+    "./envelope": {
+      "import": "./dist/envelope.js",
+      "types": "./dist/envelope.d.ts"
+    },
+    "./namespaces": {
+      "import": "./dist/namespaces.js",
+      "types": "./dist/namespaces.d.ts"
+    },
+    "./pubkey": {
+      "import": "./dist/pubkey.js",
+      "types": "./dist/pubkey.d.ts"
+    },
+    "./snode-retrieve": {
+      "import": "./dist/snode-retrieve.js",
+      "types": "./dist/snode-retrieve.d.ts"
+    },
+    "./snode-signature-result": {
+      "import": "./dist/snode-signature-result.js",
+      "types": "./dist/snode-signature-result.d.ts"
+    },
+    "./snode": {
+      "import": "./dist/snode.js",
+      "types": "./dist/snode.d.ts"
+    },
+    "./swarm": {
+      "import": "./dist/swarm.js",
+      "types": "./dist/swarm.d.ts"
+    }
+  },
   "scripts": {
     "build": "tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json --resolve-full-paths && cp src/signal-bindings/compiled.js dist/signal-bindings/compiled.js && cp src/signal-bindings/compiled.d.ts dist/signal-bindings/compiled.d.ts",
     "protobuf": "pbjs --target static-module --wrap es6 --out src/signal-bindings/compiled.js src/signal-bindings/signalservice.proto && pbts --out src/signal-bindings/compiled.d.ts src/signal-bindings/compiled.js --force-long"
