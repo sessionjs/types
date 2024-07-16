@@ -13,7 +13,7 @@
     "url": "https://github.com/sessionjs/types/issues"
   },
   "homepage": "https://github.com/sessionjs/types#readme",
-  "description": "A special package for types and enums shared internally and for developing your own @session.js/client modular parts.",
+  "description": "A special package that holds TypeScript definitions and enums shared internally and for developing your own @session.js/client modular parts.",
   "type": "module",
   "files": [
     "dist/**/*.js",
