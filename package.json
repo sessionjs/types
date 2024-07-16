@@ -1,5 +1,5 @@
 {
-  "name": "@session.js/bun-network",
+  "name": "@session.js/types",
   "version": "1.0.0",
   "module": "src/index.ts",
   "main": "dist/index.js",
@@ -7,29 +7,32 @@
   "author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev)",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sessionjs/bun-network.git"
+    "url": "git+https://github.com/sessionjs/types.git"
   },
   "bugs": {
-    "url": "https://github.com/sessionjs/bun-network/issues"
+    "url": "https://github.com/sessionjs/types/issues"
   },
-  "homepage": "https://github.com/sessionjs/bun-network#readme",
-  "description": "Bun.sh network connector for @session.js/client",
+  "homepage": "https://github.com/sessionjs/types#readme",
+  "description": "A special package for types and enums shared internally and for developing your own @session.js/client modular parts.",
   "type": "module",
   "files": [
-    "dist/index.js",
-    "dist/index.d.ts"
+    "dist/**/*.js",
+    "dist/**/*.d.ts"
   ],
   "scripts": {
-    "build": "tsc --project tsconfig.build.json && cp src/signal-bindings/compiled.js dist/signal-bindings/compiled.js && cp src/signal-bindings/compiled.d.ts dist/signal-bindings/compiled.d.ts",
+    "build": "tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json --resolve-full-paths && cp src/signal-bindings/compiled.js dist/signal-bindings/compiled.js && cp src/signal-bindings/compiled.d.ts dist/signal-bindings/compiled.d.ts",
     "protobuf": "pbjs --target static-module --wrap es6 --out src/signal-bindings/compiled.js src/signal-bindings/signalservice.proto && pbts --out src/signal-bindings/compiled.d.ts src/signal-bindings/compiled.js --force-long"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
   },
   "dependencies": {
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "protobufjs": "^7.3.2"
   },
   "devDependencies": {
-    "@types/lodash": "^4.17.7"
+    "@types/lodash": "^4.17.7",
+    "protobufjs-cli": "^1.1.2",
+    "tsc-alias": "^1.8.10"
   }
 }
