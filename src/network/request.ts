@@ -33,3 +33,7 @@ export type RequestPollBody = {
 export type RequestUploadAttachment = {
   data: ArrayBuffer
 }
+
+export type RequestDownloadAttachment = {
+  id: string
+}
