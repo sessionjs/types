@@ -1,6 +1,6 @@
 {
   "name": "@session.js/types",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev)",
@@ -81,7 +81,7 @@
     }
   },
   "scripts": {
-    "build": "tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json --resolve-full-paths && cp src/signal-bindings/compiled.js dist/signal-bindings/compiled.js && cp src/signal-bindings/compiled.d.ts dist/signal-bindings/compiled.d.ts",
+    "build": "rm -rf dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json --resolve-full-paths && cp src/signal-bindings/compiled.js dist/signal-bindings/compiled.js && cp src/signal-bindings/compiled.d.ts dist/signal-bindings/compiled.d.ts",
     "protobuf": "pbjs --target static-module --wrap es6 --out src/signal-bindings/compiled.js src/signal-bindings/signalservice.proto && pbts --out src/signal-bindings/compiled.d.ts src/signal-bindings/compiled.js --force-long"
   },
   "peerDependencies": {

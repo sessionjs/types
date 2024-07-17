@@ -8,6 +8,7 @@ export enum RequestType {
   GetSwarms = '/get_swarms',
   Poll = '/poll',
   UploadAttachment = '/upload_attachment',
+  DownloadAttachment = '/download_attachment'
 }
 
 export type RequestStoreBody = {
