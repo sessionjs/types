@@ -8,7 +8,8 @@ export enum RequestType {
   GetSwarms = '/get_swarms',
   Poll = '/poll',
   UploadAttachment = '/upload_attachment',
-  DownloadAttachment = '/download_attachment'
+  DownloadAttachment = '/download_attachment',
+  DeleteMessages = '/delete_messages',
 }
 
 export type RequestStoreBody = {
@@ -36,4 +37,9 @@ export type RequestUploadAttachment = {
 
 export type RequestDownloadAttachment = {
   id: string
+}
+
+export type RequestDeleteMessages = {
+  swarm: Swarm
+  hashes: string[]
 }
