@@ -42,4 +42,7 @@ export type RequestDownloadAttachment = {
 export type RequestDeleteMessages = {
   swarm: Swarm
   hashes: string[]
+  pubkey: string
+  pubkey_ed25519: string
+  signature: string
 }
