@@ -23,3 +23,5 @@ export type ResponseUploadAttachment = {
   url: string
   id: number
 }
+
+export type ResponseSogsRequest = unknown

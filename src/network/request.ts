@@ -10,6 +10,7 @@ export enum RequestType {
   UploadAttachment = '/upload_attachment',
   DownloadAttachment = '/download_attachment',
   DeleteMessages = '/delete_messages',
+  SOGSRequest = '/sogs_request',
 }
 
 export type RequestStoreBody = {
@@ -45,4 +46,12 @@ export type RequestDeleteMessages = {
   pubkey: string
   pubkey_ed25519: string
   signature: string
+}
+
+export type RequestSogs = {
+  host: string
+  endpoint: string
+  method: string
+  body: string | ArrayBuffer
+  headers: Record<string, string>
 }
