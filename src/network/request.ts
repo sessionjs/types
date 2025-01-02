@@ -52,6 +52,6 @@ export type RequestSogs = {
   host: string
   endpoint: string
   method: string
-  body: string | ArrayBuffer
+  body: string | ArrayBuffer | null
   headers: Record<string, string>
 }
