@@ -33,7 +33,7 @@ export type RequestPollBody = {
 }
 
 export type RequestUploadAttachment = {
-  data: ArrayBuffer
+  data: Uint8Array
 }
 
 export type RequestDownloadAttachment = {
@@ -52,6 +52,6 @@ export type RequestSogs = {
   host: string
   endpoint: string
   method: string
-  body: string | ArrayBuffer | null
+  body: string | Uint8Array | null
   headers: Record<string, string>
 }

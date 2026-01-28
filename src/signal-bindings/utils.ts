@@ -1,4 +1,4 @@
-import _ from 'lodash'
+import { isNil } from 'lodash'
 
 /**
  * This function is used to check that an optional property on a Protobuf object is not undefined or using a type-specific default value.
@@ -12,7 +12,7 @@ function hasDefinedProperty<A extends object, B extends PropertyKey & keyof A>(
   object: A,
   property: B
 ) {
-  return !_.isNil(object) && Object.prototype.hasOwnProperty.call(object, property) !== false
+  return !isNil(object) && Object.prototype.hasOwnProperty.call(object, property) !== false
 }
 
 export const ProtobufUtils = {
