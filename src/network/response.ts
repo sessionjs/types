@@ -1,27 +1,27 @@
-import type { SnodeNamespaces } from '@/namespaces'
-import type { Snode } from '@/snode'
-import type { RetrieveMessageItem } from '@/snode-retrieve'
-import type { Swarm } from '@/swarm'
+import type { SnodeNamespaces } from "../namespaces";
+import type { Snode } from "../snode";
+import type { RetrieveMessageItem } from "../snode-retrieve";
+import type { Swarm } from "../swarm";
 
 export type ResponseStore = {
-  hash: string
-}
+	hash: string;
+};
 
 export type ResponseGetSnodes = {
-  snodes: Snode[]
-}
+	snodes: Snode[];
+};
 
 export type ResponseGetSwarms = {
-  swarms: Swarm[]
-}
+	swarms: Swarm[];
+};
 
 export type ResponsePoll = {
-  messages: { namespace: SnodeNamespaces, messages: RetrieveMessageItem[] }[]
-}
+	messages: { namespace: SnodeNamespaces; messages: RetrieveMessageItem[] }[];
+};
 
 export type ResponseUploadAttachment = {
-  url: string
-  id: number
-}
+	url: string;
+	id: number;
+};
 
-export type ResponseSogsRequest = unknown
+export type ResponseSogsRequest = unknown;

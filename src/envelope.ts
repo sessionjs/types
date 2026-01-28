@@ -1,7 +1,7 @@
-import type { SignalService } from './signal-bindings'
+import type { SignalService } from "./signal-bindings";
 
-export interface EnvelopePlus extends Omit<SignalService.Envelope, 'toJSON'> {
-  senderIdentity: string;
-  receivedAt: number;
-  id: string;
+export interface EnvelopePlus extends Omit<SignalService.Envelope, "toJSON"> {
+	senderIdentity: string;
+	receivedAt: number;
+	id: string;
 }
