@@ -76,12 +76,12 @@
 			"types": "./dist/swarm.d.ts"
 		},
 		"./reactions": {
-			"import": "./dist/reactions/index.js",
-			"types": "./dist/reactions/index.d.ts"
+			"import": "./dist/reactions.js",
+			"types": "./dist/reactions.d.ts"
 		},
 		"./profile": {
-			"import": "./dist/profile/index.js",
-			"types": "./dist/profile/index.d.ts"
+			"import": "./dist/profile.js",
+			"types": "./dist/profile.d.ts"
 		},
 		"./messages/expirable-message": {
 			"import": "./dist/messages/expirable-message.js",
