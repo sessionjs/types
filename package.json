@@ -1,6 +1,6 @@
 {
 	"name": "@session.js/types",
-	"version": "1.0.17",
+	"version": "1.0.18",
 	"description": "Session Messenger messages schemas, TypeScript definitions and enums used by @session.js/client",
 	"homepage": "https://git.hloth.dev/session.js/types#readme",
 	"bugs": {
