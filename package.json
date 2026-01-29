@@ -1,6 +1,6 @@
 {
 	"name": "@session.js/types",
-	"version": "1.0.16",
+	"version": "1.0.17",
 	"description": "Session Messenger messages schemas, TypeScript definitions and enums used by @session.js/client",
 	"homepage": "https://git.hloth.dev/session.js/types#readme",
 	"bugs": {
@@ -83,37 +83,41 @@
 			"import": "./dist/messages/signal-message.js",
 			"types": "./dist/messages/signal-message.d.ts"
 		},
-		"./messages/configuration-message": {
-			"import": "./dist/messages/configuration-message.js",
-			"types": "./dist/messages/configuration-message.d.ts"
+		"./messages/schema": {
+			"import": "./dist/messages/schema/index.js",
+			"types": "./dist/messages/schema/index.d.ts"
 		},
-		"./messages/conversation-request-message": {
-			"import": "./dist/messages/conversation-request-message.js",
-			"types": "./dist/messages/conversation-request-message.d.ts"
+		"./messages/schema/configuration-message": {
+			"import": "./dist/messages/schema/configuration-message.js",
+			"types": "./dist/messages/schema/configuration-message.d.ts"
 		},
-		"./messages/data-extraction-message": {
-			"import": "./dist/messages/data-extraction-message.js",
-			"types": "./dist/messages/data-extraction-message.d.ts"
+		"./messages/schema/conversation-request-message": {
+			"import": "./dist/messages/schema/conversation-request-message.js",
+			"types": "./dist/messages/schema/conversation-request-message.d.ts"
 		},
-		"./messages/delete-message": {
-			"import": "./dist/messages/delete-message.js",
-			"types": "./dist/messages/delete-message.d.ts"
+		"./messages/schema/data-extraction-message": {
+			"import": "./dist/messages/schema/data-extraction-message.js",
+			"types": "./dist/messages/schema/data-extraction-message.d.ts"
 		},
-		"./messages/read-receipt-message": {
-			"import": "./dist/messages/read-receipt-message.js",
-			"types": "./dist/messages/read-receipt-message.d.ts"
+		"./messages/schema/delete-message": {
+			"import": "./dist/messages/schema/delete-message.js",
+			"types": "./dist/messages/schema/delete-message.d.ts"
 		},
-		"./messages/shared-config-message": {
-			"import": "./dist/messages/shared-config-message.js",
-			"types": "./dist/messages/shared-config-message.d.ts"
+		"./messages/schema/read-receipt-message": {
+			"import": "./dist/messages/schema/read-receipt-message.js",
+			"types": "./dist/messages/schema/read-receipt-message.d.ts"
 		},
-		"./messages/typing-indicator-message": {
-			"import": "./dist/messages/typing-indicator-message.js",
-			"types": "./dist/messages/typing-indicator-message.d.ts"
+		"./messages/schema/shared-config-message": {
+			"import": "./dist/messages/schema/shared-config-message.js",
+			"types": "./dist/messages/schema/shared-config-message.d.ts"
 		},
-		"./messages/visible-message": {
-			"import": "./dist/messages/visible-message.js",
-			"types": "./dist/messages/visible-message.d.ts"
+		"./messages/schema/typing-indicator-message": {
+			"import": "./dist/messages/schema/typing-indicator-message.js",
+			"types": "./dist/messages/schema/typing-indicator-message.d.ts"
+		},
+		"./messages/schema/visible-message": {
+			"import": "./dist/messages/schema/visible-message.js",
+			"types": "./dist/messages/schema/visible-message.d.ts"
 		}
 	},
 	"main": "dist/index.js",
