@@ -1,7 +1,7 @@
 {
 	"name": "@session.js/types",
-	"version": "1.0.14",
-	"description": "A special package that holds TypeScript definitions and enums shared internally and for developing your own @session.js/client modular parts.",
+	"version": "1.0.15",
+	"description": "Session Messenger messages schemas, TypeScript definitions and enums used by @session.js/client",
 	"homepage": "https://git.hloth.dev/session.js/types#readme",
 	"bugs": {
 		"url": "https://git.hloth.dev/session.js/types/issues"
@@ -14,68 +14,6 @@
 	"license": "MIT",
 	"author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev)",
 	"type": "module",
-	"exports": {
-		".": {
-			"import": "./dist/index.js",
-			"types": "./dist/index.d.ts"
-		},
-		"./network": {
-			"import": "./dist/network/index.js",
-			"types": "./dist/network/index.d.ts"
-		},
-		"./network/request": {
-			"import": "./dist/network/request.js",
-			"types": "./dist/network/request.d.ts"
-		},
-		"./network/response": {
-			"import": "./dist/network/response.js",
-			"types": "./dist/network/response.d.ts"
-		},
-		"./storage": {
-			"import": "./dist/storage/index.js",
-			"types": "./dist/storage/index.d.ts"
-		},
-		"./signal-bindings": {
-			"import": "./dist/signal-bindings/index.js",
-			"types": "./dist/signal-bindings/index.d.ts"
-		},
-		"./disappearing-message": {
-			"import": "./dist/disappearing-message.js",
-			"types": "./dist/disappearing-message.d.ts"
-		},
-		"./enums": {
-			"import": "./dist/enums.js",
-			"types": "./dist/enums.d.ts"
-		},
-		"./envelope": {
-			"import": "./dist/envelope.js",
-			"types": "./dist/envelope.d.ts"
-		},
-		"./namespaces": {
-			"import": "./dist/namespaces.js",
-			"types": "./dist/namespaces.d.ts"
-		},
-		"./pubkey": {
-			"import": "./dist/pubkey.js",
-			"types": "./dist/pubkey.d.ts"
-		},
-		"./snode-retrieve": {
-			"import": "./dist/snode-retrieve.js",
-			"types": "./dist/snode-retrieve.d.ts"
-		},
-		"./snode-signature-result": {
-			"import": "./dist/snode-signature-result.js",
-			"types": "./dist/snode-signature-result.d.ts"
-		},
-		"./snode": {
-			"import": "./dist/snode.js",
-			"types": "./dist/snode.d.ts"
-		},
-		"./swarm": {
-			"import": "./dist/swarm.js",
-			"types": "./dist/swarm.d.ts"
-		}
-	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
@@ -85,11 +23,14 @@
 		"LICENSE"
 	],
 	"scripts": {
-		"build": "rm -rf dist && tsc --project tsconfig.build.json && tsc-alias -p tsconfig.build.json --resolve-full-paths && cp src/signal-bindings/compiled.js dist/signal-bindings/compiled.js && cp src/signal-bindings/compiled.d.ts dist/signal-bindings/compiled.d.ts",
+		"build": "rm -rf dist && tsc --project tsconfig.build.json && tsc -p tsconfig.build.json && cp src/signal-bindings/compiled.js dist/signal-bindings/compiled.js && cp src/signal-bindings/compiled.d.ts dist/signal-bindings/compiled.d.ts",
 		"protobuf": "pbjs --target static-module --wrap es6 --out src/signal-bindings/compiled.js src/signal-bindings/signalservice.proto && pbts --out src/signal-bindings/compiled.d.ts src/signal-bindings/compiled.js --force-long"
 	},
 	"dependencies": {
+		"@session.js/consts": "^1.0.4",
+		"@session.js/errors": "^1.0.11",
 		"lodash": "^4.17.21",
+		"long": "^5.3.2",
 		"protobufjs": "^7.3.2"
 	},
 	"devDependencies": {
@@ -99,7 +40,6 @@
 		"eslint-config-prettier": "^10.1.8",
 		"prettier": "^3.8.0",
 		"protobufjs-cli": "^1.1.2",
-		"tsc-alias": "^1.8.10",
 		"typescript-eslint": "^8.53.1"
 	},
 	"peerDependencies": {

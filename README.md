@@ -1,6 +1,6 @@
 # @session.js/types
 
-A special package that holds TypeScript definitions and enums shared internally for developing your own @session.js/client modular parts.
+Session Messenger messages schemas, TypeScript definitions and enums used by @session.js/client
 
 To build your own Storage adapter, use:
 
