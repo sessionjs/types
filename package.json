@@ -1,6 +1,6 @@
 {
 	"name": "@session.js/types",
-	"version": "1.0.15",
+	"version": "1.0.16",
 	"description": "Session Messenger messages schemas, TypeScript definitions and enums used by @session.js/client",
 	"homepage": "https://git.hloth.dev/session.js/types#readme",
 	"bugs": {
@@ -14,6 +14,108 @@
 	"license": "MIT",
 	"author": "Viktor Shchelochkov <hi@hloth.dev> (https://hloth.dev)",
 	"type": "module",
+	"exports": {
+		".": {
+			"import": "./dist/index.js",
+			"types": "./dist/index.d.ts"
+		},
+		"./network": {
+			"import": "./dist/network/index.js",
+			"types": "./dist/network/index.d.ts"
+		},
+		"./network/request": {
+			"import": "./dist/network/request.js",
+			"types": "./dist/network/request.d.ts"
+		},
+		"./network/response": {
+			"import": "./dist/network/response.js",
+			"types": "./dist/network/response.d.ts"
+		},
+		"./storage": {
+			"import": "./dist/storage/index.js",
+			"types": "./dist/storage/index.d.ts"
+		},
+		"./signal-bindings": {
+			"import": "./dist/signal-bindings/index.js",
+			"types": "./dist/signal-bindings/index.d.ts"
+		},
+		"./disappearing-message": {
+			"import": "./dist/disappearing-message.js",
+			"types": "./dist/disappearing-message.d.ts"
+		},
+		"./enums": {
+			"import": "./dist/enums.js",
+			"types": "./dist/enums.d.ts"
+		},
+		"./envelope": {
+			"import": "./dist/envelope.js",
+			"types": "./dist/envelope.d.ts"
+		},
+		"./namespaces": {
+			"import": "./dist/namespaces.js",
+			"types": "./dist/namespaces.d.ts"
+		},
+		"./pubkey": {
+			"import": "./dist/pubkey.js",
+			"types": "./dist/pubkey.d.ts"
+		},
+		"./snode-retrieve": {
+			"import": "./dist/snode-retrieve.js",
+			"types": "./dist/snode-retrieve.d.ts"
+		},
+		"./snode-signature-result": {
+			"import": "./dist/snode-signature-result.js",
+			"types": "./dist/snode-signature-result.d.ts"
+		},
+		"./snode": {
+			"import": "./dist/snode.js",
+			"types": "./dist/snode.d.ts"
+		},
+		"./swarm": {
+			"import": "./dist/swarm.js",
+			"types": "./dist/swarm.d.ts"
+		},
+		"./messages/expirable-message": {
+			"import": "./dist/messages/expirable-message.js",
+			"types": "./dist/messages/expirable-message.d.ts"
+		},
+		"./messages/signal-message": {
+			"import": "./dist/messages/signal-message.js",
+			"types": "./dist/messages/signal-message.d.ts"
+		},
+		"./messages/configuration-message": {
+			"import": "./dist/messages/configuration-message.js",
+			"types": "./dist/messages/configuration-message.d.ts"
+		},
+		"./messages/conversation-request-message": {
+			"import": "./dist/messages/conversation-request-message.js",
+			"types": "./dist/messages/conversation-request-message.d.ts"
+		},
+		"./messages/data-extraction-message": {
+			"import": "./dist/messages/data-extraction-message.js",
+			"types": "./dist/messages/data-extraction-message.d.ts"
+		},
+		"./messages/delete-message": {
+			"import": "./dist/messages/delete-message.js",
+			"types": "./dist/messages/delete-message.d.ts"
+		},
+		"./messages/read-receipt-message": {
+			"import": "./dist/messages/read-receipt-message.js",
+			"types": "./dist/messages/read-receipt-message.d.ts"
+		},
+		"./messages/shared-config-message": {
+			"import": "./dist/messages/shared-config-message.js",
+			"types": "./dist/messages/shared-config-message.d.ts"
+		},
+		"./messages/typing-indicator-message": {
+			"import": "./dist/messages/typing-indicator-message.js",
+			"types": "./dist/messages/typing-indicator-message.d.ts"
+		},
+		"./messages/visible-message": {
+			"import": "./dist/messages/visible-message.js",
+			"types": "./dist/messages/visible-message.d.ts"
+		}
+	},
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
 	"files": [
